@@ -1,0 +1,122 @@
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.container {
+  width: 80%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.container > .countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > .countdown header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--purple);
+
+  letter-spacing: 0.1rem; /*Rem é equivalente a 16, 
+                          ou seja é só dividir o número de pixels por 16 */
+}
+
+.countdown > .countdown-time {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.countdown > .countdown-time > .countdown-time-item {
+  margin-top: 1.18rem;
+  text-align: center;
+}
+
+.countdown-time > .countdown-time-item > .countdown-time-item-text {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.countdown-time > .countdown-time-item > .countdown-time-item-number {
+  font-size: 4.5rem;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.container > .countdown footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.container > .countdown footer span {
+  display: block;
+
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.container > .countdown footer button {
+  margin-top: 2rem;
+
+  padding: 0.8rem 3rem;
+  background: var(--purple);
+
+  border: 2px solid var(--purple);
+  border-radius: 15px;
+
+  font-size: 1.12rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+
+  color: var(--white);
+
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.container > .countdown footer button:hover {
+  border: 2px solid var(--purple);
+  color: var(--purple);
+  background: transparent;
+}
+
+@media (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .container > .countdown header h1 {
+    font-size: 1.5rem;
+  }
+  .container > .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container > .image > img{
+    width: 90%;
+  }
+}
+
+
+
