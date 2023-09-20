@@ -3,13 +3,13 @@ const hoursText = document.querySelector("#hours");
 const minsText = document.querySelector("#mins");
 const secsText = document.querySelector("#secs");
 
-const newYearsDate = new Date("1 Jan 2024");
+const newYearsDate = countdownToYear();
 
 setInterval(countdown, 1000);
 
 function countdown() {
-    const { days, hours, mins, secs } = processCountdownValues()
-    renderCountdown({ days, hours, mins, secs })
+  const { days, hours, mins, secs } = processCountdownValues();
+  renderCountdown({ days, hours, mins, secs });
 }
 
 function addPadStart(value) {
@@ -33,4 +33,12 @@ function renderCountdown({ days, hours, mins, secs }) {
   hoursText.innerText = addPadStart(hours);
   minsText.innerText = addPadStart(mins);
   secsText.innerText = addPadStart(secs);
+}
+
+// TUDO: PEGAR DATA DE HOJE, DESCOBRIR O ULTÍMO DIA DO ANO POR ESSA DATA, RETORNAR.
+
+function countdownToYear() {
+  const currentYear = new Date().getFullYear();
+  const firstDayNextYear = new Date(currentYear + 1, 0, 1);
+  return firstDayNextYear;
 }
