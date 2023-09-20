@@ -6,7 +6,7 @@
 
 ## 💻 Project
 
-> This project is a coming soon page for launches of services
+> This project is a coming soon page for launches of services.
 
 The idea is:
 
